@@ -49,8 +49,8 @@ I start by preparing "object points", which will be the (x, y, z) coordinates of
 
 I then used the output `objpoints` and `imgpoints` to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function.  I applied this distortion correction to the test image using the `cv2.undistort()` function and obtained this result: 
 
-![alt text][ ./camera_cal/calibration1.jpg]
-![alt text][./calibration1_undist.jpg]
+![alt text](./camera_cal/calibration1.jpg)
+![alt text]()./calibration1_undist.jpg)
 
 ### Pipeline (single images)
 
@@ -58,20 +58,19 @@ I then used the output `objpoints` and `imgpoints` to compute the camera calibra
 
 To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like this one:
 original:
-![alt text][./test_images/test5.jpg]
+![alt text](./test_images/test5.jpg)
 
 First I load the calibration result we saved before, then use it to undistort a test image,
 (see code cell "1.Use the camera calibration..." in ./examples/example.ipynb)
 
 undistorted:
 
-![alt text][./output_images/test5_undist.jpg]
+![alt text](./output_images/test5_undist.jpg)
 
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
-I used a combination of color and gradient magnitude thresholds to generate a binary image (see code cell "2. Create a thresholded binary image in ./examples/example.ipynb).  Here's an example of my output for this step.  (note: this is not actually from one of the test images)
-
-
+I used a combination of color and gradient magnitude thresholds to generate a binary image (see code cell "2. Create a thresholded binary image in ./examples/example.ipynb).  Here's an example of my output for this step. 
+![alt text](./output_images/test5_thresholded.jpg)
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
@@ -101,14 +100,14 @@ This resulted in the following source and destination points:
 
 I verified that my perspective transform was working as expected by drawing the `src` and `dst` points onto a test image and its warped counterpart to verify that the lines appear parallel in the warped image.
 
-![alt text][./output_images/test5_undist.jpg]
-![alt text][./output_images/test5_wraped.jpg]
+![alt text](./output_images/test5_undist.jpg)
+![alt text](./output_images/test5_wraped.jpg)
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
 Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
 
-![alt text][image5]
+![alt text](./output_images/test5_lane_line.jpg)
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
@@ -116,9 +115,9 @@ I did this in the code cell "5. Calculate the radius of curvature"  in  ./exampl
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
-I implemented this step in the code cell "6. Provide an example" in  ./examples/example.ipynb in the function `draw_lane_line()`.  Here is an example of my result on a test image:
+I implemented this step in the code cell "6. Provide an example..." in  ./examples/example.ipynb in the function `draw_lane_line()`.  Here is an example of my result on a test image:
 
-![alt text][./output_images/test5_final.jpg]
+![alt text](./output_images/test5_final.jpg)
 
 ---
 
@@ -126,7 +125,7 @@ I implemented this step in the code cell "6. Provide an example" in  ./examples/
 
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
-Here's a [link to my video result](./project_video.mp4)
+The final video file is project_video_output.mp4 located in the same directory of this file.
 
 ---
 
