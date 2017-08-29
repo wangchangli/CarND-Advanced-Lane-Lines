@@ -125,7 +125,7 @@ I implemented this step in the code cell "6. Provide an example..." in  ./exampl
 
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
-The final video file is project_video_output.mp4 located in the same directory of this file.
+The final video file is project_video_output.mp4 located in the same directory of this file. In the video, there are two places at which the pipeline didn't work well, I am keep working on it...
 
 ---
 
