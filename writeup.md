@@ -135,3 +135,5 @@ The final video file is project_video_output.mp4 located in the same directory o
 
 
 In the video, there are two places at which my pipeline didn't work well, I think I need to do more work on "Sanity Check", I am keep working on it...
+
+My pipeline may not work well when the road are covered by the shadow of trees for a short time.  
