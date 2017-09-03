@@ -133,7 +133,8 @@ The final video file is project_video_output.mp4 located in the same directory o
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
+The biggest problem I faced is I forgot to pop the old-fit-lane when I didn't detect a line on the current frame, this might cause the lane didn't fit well when we then detect lane again.
 
-In the video, there are two places at which my pipeline didn't work well, I think I need to do more work on "Sanity Check", I am keep working on it...
+The second problem I faced is how to decide if a lane we found is ok when we didn't have any buffered(previous) fit lines to compare with.
 
-My pipeline may not work well when the road are covered by the shadow of trees for a short time.  
+My pipeline may not work well when the road are covered by the shadow of trees for a long time, we could do better in phase "create a thresholded binary image" to reduce the effect of the shadow.  
